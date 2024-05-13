@@ -12,7 +12,7 @@ check_nmap_installed() {
 # Function to install nmap on Debian-based systems
 install_nmap_debian() {
     echo "Installing nmap..."
-    if sudo apt-get update && sudo apt-get install -y nmap; then
+    if apt-get update && apt-get install -y nmap; then
         echo "nmap installed successfully."
     else
         echo "Error: Failed to install nmap." >&2
@@ -23,7 +23,7 @@ install_nmap_debian() {
 # Function to install nmap on Red Hat-based systems
 install_nmap_redhat() {
     echo "Installing nmap..."
-    if sudo yum install -y nmap; then
+    if yum install -y nmap; then
         echo "nmap installed successfully."
     else
         echo "Error: Failed to install nmap." >&2
